@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "software_sections",
+  "info": {
+    "singularName": "software-section",
+    "pluralName": "software-sections",
+    "displayName": "SoftwareSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "head": {
+      "type": "string",
+      "default": "Software Product Development",
+      "required": true
+    },
+    "subHead": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "shared.service-item",
+      "repeatable": true
+    }
+  }
+}

@@ -6,6 +6,7 @@ export interface SharedFeature extends Struct.ComponentSchema {
     displayName: 'Feature';
   };
   attributes: {
+    link: Schema.Attribute.String;
     text: Schema.Attribute.String;
   };
 }
@@ -60,6 +61,18 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedServiceItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_service_items';
+  info: {
+    displayName: 'ServiceItem';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedSlider extends Struct.ComponentSchema {
   collectionName: 'components_shared_sliders';
   info: {
@@ -80,6 +93,7 @@ declare module '@strapi/strapi' {
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
+      'shared.service-item': SharedServiceItem;
       'shared.slider': SharedSlider;
     }
   }
