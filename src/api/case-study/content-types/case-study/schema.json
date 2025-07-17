@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_studies",
+  "info": {
+    "singularName": "case-study",
+    "pluralName": "case-studies",
+    "displayName": "CaseStudy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "head": {
+      "type": "string",
+      "default": "Our Case Studies",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "component": "shared.service-item",
+      "repeatable": true
+    }
+  }
+}
