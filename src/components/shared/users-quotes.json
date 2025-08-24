@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_users_quotes",
+  "info": {
+    "displayName": "usersQuotes"
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "richtext"
+    },
+    "fullName": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
