@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_team_highlights",
+  "info": {
+    "displayName": "teamHighlight"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "component",
+      "component": "shared.rich-text",
+      "repeatable": true
+    },
+    "ceoName": {
+      "type": "string"
+    },
+    "ceoTitle": {
+      "type": "string"
+    },
+    "ceoImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

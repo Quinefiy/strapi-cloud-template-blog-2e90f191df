@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_study_details",
+  "info": {
+    "singularName": "case-study-detail",
+    "pluralName": "case-study-details",
+    "displayName": "CaseStudyDetail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "mainImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "sections": {
+      "type": "component",
+      "component": "shared.sections",
+      "repeatable": true
+    }
+  }
+}

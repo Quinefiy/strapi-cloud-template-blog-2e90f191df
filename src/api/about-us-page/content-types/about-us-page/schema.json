@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_us_pages",
+  "info": {
+    "singularName": "about-us-page",
+    "pluralName": "about-us-pages",
+    "displayName": "AboutUsPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "head": {
+      "type": "string"
+    },
+    "subHead": {
+      "type": "text"
+    },
+    "mainImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "teamHighlight": {
+      "type": "component",
+      "component": "shared.team-highlight",
+      "repeatable": false
+    },
+    "OurTeam": {
+      "type": "component",
+      "component": "shared.our-team",
+      "repeatable": true
+    },
+    "usersQuotes": {
+      "type": "component",
+      "component": "shared.users-quotes",
+      "repeatable": true
+    }
+  }
+}
