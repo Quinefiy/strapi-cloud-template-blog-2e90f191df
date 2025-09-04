@@ -178,6 +178,7 @@ export interface SharedUsersQuotes extends Struct.ComponentSchema {
   attributes: {
     fullName: Schema.Attribute.String;
     jobTitle: Schema.Attribute.String;
+    Photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     quote: Schema.Attribute.RichText;
   };
 }
