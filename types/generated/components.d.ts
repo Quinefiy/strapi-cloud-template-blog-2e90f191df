@@ -28,9 +28,9 @@ export interface SharedForm extends Struct.ComponentSchema {
     displayName: 'form';
   };
   attributes: {
-    label: Schema.Attribute.String;
+    Email: Schema.Attribute.String;
+    Message: Schema.Attribute.String;
     name: Schema.Attribute.String;
-    type: Schema.Attribute.String;
   };
 }
 
@@ -77,6 +77,7 @@ export interface SharedQuote extends Struct.ComponentSchema {
   };
   attributes: {
     body: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }
