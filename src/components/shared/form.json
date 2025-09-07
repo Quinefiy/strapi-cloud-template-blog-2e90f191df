@@ -8,10 +8,10 @@
     "name": {
       "type": "string"
     },
-    "label": {
+    "Email": {
       "type": "string"
     },
-    "type": {
+    "Message": {
       "type": "string"
     }
   },
