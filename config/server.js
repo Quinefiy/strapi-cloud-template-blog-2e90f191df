@@ -1,4 +1,4 @@
-/*module.exports = ({ env }) => ({
+module.exports = ({ env }) => ({
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
   app: {
@@ -7,11 +7,11 @@
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
   },
-});*/
-module.exports = () => ({
-  host: '0.0.0.0',
-  port: 1337,
-  app: {
-    keys: ['mySuperSecretKey1', 'mySuperSecretKey2'],
-  },
 });
+// module.exports = () => ({
+//   host: '0.0.0.0',
+//   port: 1337,
+//   app: {
+//     keys: ['mySuperSecretKey1', 'mySuperSecretKey2'],
+//   },
+// });
