@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_software_products",
+  "info": {
+    "displayName": "software products"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "products": {
+      "type": "component",
+      "component": "shared.products",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_services_heroes",
+  "info": {
+    "displayName": "servicesHero"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "btn": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

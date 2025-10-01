@@ -11,15 +11,27 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "head": {
-      "type": "string",
-      "default": "Our Case Studies",
-      "required": true
+    "title": {
+      "type": "string"
     },
-    "items": {
-      "type": "component",
-      "component": "shared.service-item",
-      "repeatable": true
+    "slug": {
+      "type": "string"
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "fullDescription": {
+      "type": "blocks"
+    },
+    "caseImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

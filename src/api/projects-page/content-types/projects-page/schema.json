@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "projects_pages",
+  "info": {
+    "singularName": "projects-page",
+    "pluralName": "projects-pages",
+    "displayName": "Projects Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projects": {
+      "type": "component",
+      "component": "shared.service-and-project",
+      "repeatable": true
+    },
+    "startYourJourney": {
+      "type": "component",
+      "component": "shared.start-your-journey",
+      "repeatable": false
+    },
+    "projectsHero": {
+      "type": "component",
+      "component": "shared.projects-hero",
+      "repeatable": false
+    }
+  }
+}

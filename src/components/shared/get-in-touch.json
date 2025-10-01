@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_get_in_touches",
+  "info": {
+    "displayName": "Get In touch"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "contactInfo": {
+      "type": "component",
+      "component": "shared.contact-info",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

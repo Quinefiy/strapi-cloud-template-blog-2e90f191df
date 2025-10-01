@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_ceo_data",
+  "info": {
+    "displayName": "ceo data"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

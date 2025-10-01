@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_projects_heroes",
+  "info": {
+    "displayName": "projectsHero"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

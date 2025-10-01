@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_start_your_journeys",
+  "info": {
+    "displayName": "start your journey"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
