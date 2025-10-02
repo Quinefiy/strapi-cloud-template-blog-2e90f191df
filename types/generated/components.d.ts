@@ -136,8 +136,11 @@ export interface SharedHero extends Struct.ComponentSchema {
     displayName: 'hero';
   };
   attributes: {
-    button: Schema.Attribute.Component<'shared.button', true>;
+    aboutUsNavigateBtn: Schema.Attribute.String;
+    companyName: Schema.Attribute.String;
     head: Schema.Attribute.String;
+    headingFirstWord: Schema.Attribute.String;
+    headingSecondPart: Schema.Attribute.String;
     subHead: Schema.Attribute.String;
   };
 }

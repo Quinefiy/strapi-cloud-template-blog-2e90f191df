@@ -655,7 +655,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     ourCaseStudies: Schema.Attribute.Component<'shared.case-studies', false>;
     ourServices: Schema.Attribute.Component<'shared.our-services', false>;
-    partners: Schema.Attribute.Component<'shared.partners', true>;
+    partners: Schema.Attribute.Component<'shared.partners', false>;
     pricing: Schema.Attribute.Component<'shared.pricing', false>;
     publishedAt: Schema.Attribute.DateTime;
     softwareProducts: Schema.Attribute.Component<
