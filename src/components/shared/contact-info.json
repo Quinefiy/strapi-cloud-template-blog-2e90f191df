@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_contact_infos",
+  "info": {
+    "displayName": "Contact Info"
+  },
+  "options": {},
+  "attributes": {
+    "contactName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,27 +1,29 @@
 {
   "kind": "singleType",
-  "collectionName": "contact_us_pages",
+  "collectionName": "pricing_pages",
   "info": {
-    "singularName": "contact-us-page",
-    "pluralName": "contact-us-pages",
-    "displayName": "Contact Us Page"
+    "singularName": "pricing-page",
+    "pluralName": "pricing-pages",
+    "displayName": "Pricing Page"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "getInTouch": {
+    "pricingPlans": {
       "type": "component",
-      "component": "shared.get-in-touch",
+      "component": "shared.pricing",
       "repeatable": false
-    },
-    "formHeading": {
-      "type": "string"
     },
     "startYourJourney": {
       "type": "component",
       "component": "shared.start-your-journey",
+      "repeatable": false
+    },
+    "pricingHero": {
+      "type": "component",
+      "component": "shared.projects-hero",
       "repeatable": false
     }
   }

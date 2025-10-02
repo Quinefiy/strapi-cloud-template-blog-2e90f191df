@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "shared.hero",
+      "repeatable": false
+    },
+    "partners": {
+      "type": "component",
+      "component": "shared.partners",
+      "repeatable": true
+    },
+    "softwareProducts": {
+      "type": "component",
+      "component": "shared.software-products",
+      "repeatable": false
+    },
+    "ourServices": {
+      "type": "component",
+      "component": "shared.our-services",
+      "repeatable": false
+    },
+    "pricing": {
+      "type": "component",
+      "component": "shared.pricing",
+      "repeatable": false
+    },
+    "ourCaseStudies": {
+      "type": "component",
+      "component": "shared.case-studies",
+      "repeatable": false
+    },
+    "startYourJourney": {
+      "type": "component",
+      "component": "shared.start-your-journey",
+      "repeatable": false
+    }
+  }
+}

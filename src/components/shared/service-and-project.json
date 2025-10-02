@@ -1,17 +1,12 @@
 {
   "collectionName": "components_shared_service_and_projects",
   "info": {
-    "displayName": "Service&Project"
+    "displayName": "Project"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
-    },
-    "richText": {
-      "type": "component",
-      "component": "shared.rich-text",
-      "repeatable": false
     },
     "image": {
       "type": "media",
@@ -23,7 +18,7 @@
         "audios"
       ]
     },
-    "logo": {
+    "companyLogo": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -32,6 +27,9 @@
         "videos",
         "audios"
       ]
+    },
+    "description": {
+      "type": "text"
     }
   },
   "config": {}

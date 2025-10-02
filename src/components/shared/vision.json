@@ -1,11 +1,11 @@
 {
-  "collectionName": "components_shared_buttons",
+  "collectionName": "components_shared_visions",
   "info": {
-    "displayName": "button"
+    "displayName": "vision"
   },
   "options": {},
   "attributes": {
-    "text": {
+    "content": {
       "type": "string"
     }
   },

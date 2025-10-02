@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_our_users",
+  "info": {
+    "displayName": "our users"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "usersQuotes": {
+      "type": "component",
+      "component": "shared.users-quotes",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

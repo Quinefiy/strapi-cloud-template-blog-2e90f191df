@@ -1,46 +1,40 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "about_us_pages",
   "info": {
     "singularName": "about-us-page",
     "pluralName": "about-us-pages",
-    "displayName": "AboutUsPage"
+    "displayName": "About Us Page"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "head": {
-      "type": "string"
-    },
-    "subHead": {
-      "type": "text"
-    },
-    "mainImage": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "teamHighlight": {
+    "AboutUsHero": {
       "type": "component",
-      "component": "shared.team-highlight",
+      "component": "shared.about-us-hero",
       "repeatable": false
     },
-    "OurTeam": {
+    "manageBusiness": {
       "type": "component",
-      "component": "shared.our-team",
-      "repeatable": true
+      "component": "shared.manage-business",
+      "repeatable": false
     },
-    "usersQuotes": {
+    "team": {
       "type": "component",
-      "component": "shared.users-quotes",
-      "repeatable": true
+      "component": "shared.team-section",
+      "repeatable": false
+    },
+    "ourUsers": {
+      "type": "component",
+      "component": "shared.our-users",
+      "repeatable": false
+    },
+    "startYourJourney": {
+      "type": "component",
+      "component": "shared.start-your-journey",
+      "repeatable": false
     }
   }
 }

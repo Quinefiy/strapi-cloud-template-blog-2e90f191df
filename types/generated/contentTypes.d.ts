@@ -373,10 +373,10 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiAboutUsPageAboutUsPage extends Struct.CollectionTypeSchema {
+export interface ApiAboutUsPageAboutUsPage extends Struct.SingleTypeSchema {
   collectionName: 'about_us_pages';
   info: {
-    displayName: 'AboutUsPage';
+    displayName: 'About Us Page';
     pluralName: 'about-us-pages';
     singularName: 'about-us-page';
   };
@@ -384,25 +384,60 @@ export interface ApiAboutUsPageAboutUsPage extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    AboutUsHero: Schema.Attribute.Component<'shared.about-us-hero', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    head: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::about-us-page.about-us-page'
     > &
       Schema.Attribute.Private;
-    mainImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    OurTeam: Schema.Attribute.Component<'shared.our-team', true>;
+    manageBusiness: Schema.Attribute.Component<'shared.manage-business', false>;
+    ourUsers: Schema.Attribute.Component<'shared.our-users', false>;
     publishedAt: Schema.Attribute.DateTime;
-    subHead: Schema.Attribute.Text;
-    teamHighlight: Schema.Attribute.Component<'shared.team-highlight', false>;
+    startYourJourney: Schema.Attribute.Component<
+      'shared.start-your-journey',
+      false
+    >;
+    team: Schema.Attribute.Component<'shared.team-section', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    usersQuotes: Schema.Attribute.Component<'shared.users-quotes', true>;
+  };
+}
+
+export interface ApiCaseStudiesPageCaseStudiesPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'case_studies_pages';
+  info: {
+    displayName: 'Case Studies Page';
+    pluralName: 'case-studies-pages';
+    singularName: 'case-studies-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    caseStudies: Schema.Attribute.Component<'shared.case-studies', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-studies-page.case-studies-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    startYourJourney: Schema.Attribute.Component<
+      'shared.start-your-journey',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -450,13 +485,11 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    caseImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    head: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Our Case Studies'>;
-    items: Schema.Attribute.Component<'shared.service-item', true>;
+    fullDescription: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -464,6 +497,9 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    shortDescription: Schema.Attribute.Text;
+    slug: Schema.Attribute.String;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -501,11 +537,10 @@ export interface ApiContactSubmissionContactSubmission
   };
 }
 
-export interface ApiContactUsPageContactUsPage
-  extends Struct.CollectionTypeSchema {
+export interface ApiContactUsPageContactUsPage extends Struct.SingleTypeSchema {
   collectionName: 'contact_us_pages';
   info: {
-    displayName: 'ContactUsPage';
+    displayName: 'Contact Us Page';
     pluralName: 'contact-us-pages';
     singularName: 'contact-us-page';
   };
@@ -513,16 +548,47 @@ export interface ApiContactUsPageContactUsPage
     draftAndPublish: true;
   };
   attributes: {
-    contactInfo: Schema.Attribute.Component<'shared.quote', true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    form: Schema.Attribute.Component<'shared.form', true>;
-    hero: Schema.Attribute.Component<'shared.hero', false>;
+    formHeading: Schema.Attribute.String;
+    getInTouch: Schema.Attribute.Component<'shared.get-in-touch', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::contact-us-page.contact-us-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    startYourJourney: Schema.Attribute.Component<
+      'shared.start-your-journey',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFooterFooter extends Struct.SingleTypeSchema {
+  collectionName: 'footers';
+  info: {
+    displayName: 'Footer';
+    pluralName: 'footers';
+    singularName: 'footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footer: Schema.Attribute.Component<'shared.footer', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::footer.footer'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -566,6 +632,46 @@ export interface ApiHeroSectionHeroSection extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
+  collectionName: 'home_pages';
+  info: {
+    displayName: 'Home Page';
+    pluralName: 'home-pages';
+    singularName: 'home-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'shared.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::home-page.home-page'
+    > &
+      Schema.Attribute.Private;
+    ourCaseStudies: Schema.Attribute.Component<'shared.case-studies', false>;
+    ourServices: Schema.Attribute.Component<'shared.our-services', false>;
+    partners: Schema.Attribute.Component<'shared.partners', true>;
+    pricing: Schema.Attribute.Component<'shared.pricing', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    softwareProducts: Schema.Attribute.Component<
+      'shared.software-products',
+      false
+    >;
+    startYourJourney: Schema.Attribute.Component<
+      'shared.start-your-journey',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLogoLogo extends Struct.CollectionTypeSchema {
   collectionName: 'logos';
   info: {
@@ -588,6 +694,39 @@ export interface ApiLogoLogo extends Struct.CollectionTypeSchema {
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Trusted by 10,000+ founders & business owners'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPricingPagePricingPage extends Struct.SingleTypeSchema {
+  collectionName: 'pricing_pages';
+  info: {
+    displayName: 'Pricing Page';
+    pluralName: 'pricing-pages';
+    singularName: 'pricing-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pricing-page.pricing-page'
+    > &
+      Schema.Attribute.Private;
+    pricingHero: Schema.Attribute.Component<'shared.projects-hero', false>;
+    pricingPlans: Schema.Attribute.Component<'shared.pricing', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    startYourJourney: Schema.Attribute.Component<
+      'shared.start-your-journey',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -652,6 +791,39 @@ export interface ApiProjectPageProjectPage extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiProjectsPageProjectsPage extends Struct.SingleTypeSchema {
+  collectionName: 'projects_pages';
+  info: {
+    displayName: 'Projects Page';
+    pluralName: 'projects-pages';
+    singularName: 'projects-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::projects-page.projects-page'
+    > &
+      Schema.Attribute.Private;
+    projects: Schema.Attribute.Component<'shared.service-and-project', true>;
+    projectsHero: Schema.Attribute.Component<'shared.projects-hero', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    startYourJourney: Schema.Attribute.Component<
+      'shared.start-your-journey',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServicePageServicePage extends Struct.CollectionTypeSchema {
   collectionName: 'service_pages';
   info: {
@@ -708,6 +880,43 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServicesPageServicesPage extends Struct.SingleTypeSchema {
+  collectionName: 'services_pages';
+  info: {
+    displayName: 'services page';
+    pluralName: 'services-pages';
+    singularName: 'services-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::services-page.services-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    services: Schema.Attribute.Component<'shared.service-item', true>;
+    servicesHero: Schema.Attribute.Component<'shared.services-hero', false>;
+    softwareProducts: Schema.Attribute.Component<
+      'shared.software-products',
+      false
+    >;
+    startYourJourney: Schema.Attribute.Component<
+      'shared.start-your-journey',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1291,16 +1500,22 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-us-page.about-us-page': ApiAboutUsPageAboutUsPage;
+      'api::case-studies-page.case-studies-page': ApiCaseStudiesPageCaseStudiesPage;
       'api::case-study-detail.case-study-detail': ApiCaseStudyDetailCaseStudyDetail;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::contact-submission.contact-submission': ApiContactSubmissionContactSubmission;
       'api::contact-us-page.contact-us-page': ApiContactUsPageContactUsPage;
+      'api::footer.footer': ApiFooterFooter;
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;
+      'api::home-page.home-page': ApiHomePageHomePage;
       'api::logo.logo': ApiLogoLogo;
+      'api::pricing-page.pricing-page': ApiPricingPagePricingPage;
       'api::pricing-plan.pricing-plan': ApiPricingPlanPricingPlan;
       'api::project-page.project-page': ApiProjectPageProjectPage;
+      'api::projects-page.projects-page': ApiProjectsPageProjectsPage;
       'api::service-page.service-page': ApiServicePageServicePage;
       'api::service.service': ApiServiceService;
+      'api::services-page.services-page': ApiServicesPageServicesPage;
       'api::social-media.social-media': ApiSocialMediaSocialMedia;
       'api::software-section.software-section': ApiSoftwareSectionSoftwareSection;
       'plugin::content-releases.release': PluginContentReleasesRelease;

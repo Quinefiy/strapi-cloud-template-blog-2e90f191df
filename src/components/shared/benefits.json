@@ -1,11 +1,11 @@
 {
-  "collectionName": "components_shared_buttons",
+  "collectionName": "components_shared_benefits",
   "info": {
-    "displayName": "button"
+    "displayName": "benefits"
   },
   "options": {},
   "attributes": {
-    "text": {
+    "benefit": {
       "type": "string"
     }
   },

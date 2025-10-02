@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_shared_media",
+  "collectionName": "components_shared_products",
   "info": {
-    "displayName": "Media",
-    "icon": "file-video"
+    "displayName": "products"
   },
   "options": {},
   "attributes": {
@@ -12,11 +11,16 @@
       "allowedTypes": [
         "images",
         "files",
-        "videos"
+        "videos",
+        "audios"
       ]
     },
-    "link": {
+    "title": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
     }
-  }
+  },
+  "config": {}
 }

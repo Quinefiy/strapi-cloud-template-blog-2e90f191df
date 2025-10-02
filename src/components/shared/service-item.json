@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "icon": {
+    "img": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -17,13 +17,10 @@
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "text"
-    },
     "detailsSection": {
       "type": "component",
       "component": "shared.sections",
-      "repeatable": true
+      "repeatable": false
     }
   },
   "config": {}

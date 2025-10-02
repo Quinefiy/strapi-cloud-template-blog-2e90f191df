@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_shared_media",
+  "collectionName": "components_shared_services",
   "info": {
-    "displayName": "Media",
-    "icon": "file-video"
+    "displayName": "services"
   },
   "options": {},
   "attributes": {
@@ -12,11 +11,13 @@
       "allowedTypes": [
         "images",
         "files",
-        "videos"
+        "videos",
+        "audios"
       ]
     },
-    "link": {
+    "title": {
       "type": "string"
     }
-  }
+  },
+  "config": {}
 }
