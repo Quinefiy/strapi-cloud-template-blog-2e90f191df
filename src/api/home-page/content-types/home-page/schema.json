@@ -19,7 +19,7 @@
     "partners": {
       "type": "component",
       "component": "shared.partners",
-      "repeatable": true
+      "repeatable": false
     },
     "softwareProducts": {
       "type": "component",

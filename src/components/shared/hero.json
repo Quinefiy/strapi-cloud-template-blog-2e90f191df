@@ -11,10 +11,17 @@
     "subHead": {
       "type": "string"
     },
-    "button": {
-      "type": "component",
-      "component": "shared.button",
-      "repeatable": true
+    "headingFirstWord": {
+      "type": "string"
+    },
+    "companyName": {
+      "type": "string"
+    },
+    "headingSecondPart": {
+      "type": "string"
+    },
+    "aboutUsNavigateBtn": {
+      "type": "string"
     }
   },
   "config": {}
